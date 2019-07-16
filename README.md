@@ -1,1 +1,2 @@
-![Captura de Ecrã (264)](https://user-images.githubusercontent.com/24450304/61298522-455be100-a7d6-11e9-86f0-040c84fccbed.png)
+![Captura de Ecrã (265)](https://user-images.githubusercontent.com/24450304/61299136-6c66e280-a7d7-11e9-9644-f77e1d6e2ef4.png)
+

@@ -1,8 +1,37 @@
 const mongoose = require('mongoose');
+const mysql = require('mysql');
 const Product = mongoose.model('Product');
+
+
+var connection = mysql.createConnection({
+  host:'localhost',
+  user:'root',
+  password:'evan@admin94',
+  database:'nodeapiDB'
+
+});
+
+connection.connect(function(error){
+  if(!!error){
+       console.log('Error');
+  }else {
+      console.log('Connected');
+      
+  }
+
+});
 
 module.exports = {
              async index(req,res){
+              connection.query("SELECT * FROM nodeTable",function(error,rows,fiels){
+
+                if(!!error){
+                    console.log('Error');
+                } else {
+                   console.log(); 
+                    console.log(rows);
+                }
+              }); 
                  const {page = 1} = req.query;
                    const products = await Product.paginate({},{page:page, limit:10});
                      return res.json(products);

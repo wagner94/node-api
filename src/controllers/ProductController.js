@@ -29,8 +29,8 @@ module.exports = {
                     console.log('Error');
                 } else {
                    console.log(); 
-                    console.log(rows);
-                }
+                    console.log(rows[1].name);
+                }  
               }); 
                  const {page = 1} = req.query;
                    const products = await Product.paginate({},{page:page, limit:10});

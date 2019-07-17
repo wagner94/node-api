@@ -19,6 +19,6 @@ app.use(cors());
 
 //const Product = mongoose.model('Product');
 
-app.use('/api', require('./src/routes'));
+app.use('/', require('./src/routes'));
 
 app.listen(3001);

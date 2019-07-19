@@ -4,6 +4,8 @@ const mysql = require('mysql');
 const Product = mongoose.model('Product');
 
 
+
+
 var connection = mysql.createPool({
   connectionLimit:50,
   host:'localhost',
@@ -47,7 +49,8 @@ module.exports = {
                    if(!!error){
                      console.log('Error in the query');
                    }else{
-                     res.json(rows);
+                     //res.json(rows);
+                     res.send('home');
                    } 
                    
                    
